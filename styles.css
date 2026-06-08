@@ -1,0 +1,269 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #051622;
+  color: #edf2f7;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(135deg, rgba(10, 25, 50, 0.98), rgba(4, 12, 24, 0.9));
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.6vw, 3rem);
+}
+
+.brand p {
+  margin: 0.25rem 0 0;
+  color: #8aa6c1;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: #dbeafe;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 4rem 0 3rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.subtitle {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  color: #98c1ff;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h2 {
+  margin: 1rem 0 1rem;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.hero p {
+  max-width: 45rem;
+  font-size: 1.05rem;
+  color: #cfd8eb;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: #2f85ff;
+  color: white;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 20px 40px rgba(15, 90, 214, 0.18);
+}
+
+.hero-image img {
+  height: 100%;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-header {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.section-header h3 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.section-header p {
+  margin: 0;
+  color: #abb8cc;
+}
+
+.about-grid,
+.records-grid,
+.gallery-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-card,
+.record-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.8rem;
+}
+
+.about-card h4,
+.record-card h4 {
+  margin: 0 0 0.8rem;
+  font-size: 1.15rem;
+}
+
+.about-card p,
+.record-card p {
+  margin: 0;
+  color: #c2d1e8;
+}
+
+.records-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.record-card span {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  color: #7dd3fc;
+}
+
+.career-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.career-text ul {
+  margin: 1rem 0 0;
+  padding-left: 1.25rem;
+  color: #d8e5f4;
+}
+
+.career-text li {
+  margin-bottom: 0.9rem;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.site-footer {
+  background: #07131f;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-inner h3 {
+  margin: 0 0 0.5rem;
+}
+
+.footer-inner p {
+  margin: 0;
+  color: #9db4ce;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #dbeafe;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 960px) {
+  .hero-content,
+  .career-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid,
+  .records-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
